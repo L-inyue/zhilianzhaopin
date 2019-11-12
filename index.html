@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--    <script src="./js/echarts.js"></script>-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/echarts.js"></script>
+    <!--    <script src="echarts/echarts.all.js"></script>-->
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 1260px;height:400px;"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    option = {
+        xAxis: {
+            type: 'category',
+            data: ['北京', '宁波', '杭州', '成都', '武汉', '珠海', '上海', '深圳', '沈阳', '南京', '天津', '徐州', '佛山', '乌鲁木齐', '郑州', '广州', '厦门', '西安', '苏州', '大连', '长沙', '抚顺', '青岛', '菏泽', '合肥', '福州', '石家庄', '济南', '南昌', '重庆', '无锡', '长春', '太原', '西宁', '新乡', '临沂', '南通', '烟台', '绍兴', '潍坊', '泸州', '平顶山', '兰州', '泰州', '金华', '贵阳', '常州', '银川', '邯郸', '昆明', '唐山', '秦皇岛', '保定', '日照', '哈尔滨', '鞍山', '襄阳', '泉州', '淄博', '新余', '湘西', '东莞', '嘉兴', '咸宁', '常德', '淮安', '周口', '贵州', '海口', '甘肃', '四川']
+
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: ['14.3', '7.29', '8.9', '8.62', '9.91', '10.0', '11.73', '9.35', '5.53', '8.51', '11.33', '7.5', '6.6', '7.25', '8.58', '11.46', '13.03', '8.9', '8.27', '9.12', '10.64', '2.0', '8.04', '5.0', '8.11', '10.07', '8.86', '7.98', '7.0', '12.63', '8.25', '6.4', '11.23', '13.67', '8.0', '8.0', '8.5', '5.71', '8.0', '5.0', '7.0', '6.0', '7.25', '7.0', '8.0', '14.0', '9.0', '11.5', '4.4', '12.0', '4.0', '4.0', '4.5', '9.0', '6.25', '3.0', '6.0', '7.0', '4.0', '4.0', '7.5', '8.0', '15.0', '3.0', '6.0', '3.5', '6.0', '全是工资面议有点难以置信', '全是工资面议有点难以置信', '全是工资面议有点难以置信', '全是工资面议有点难以置信']
+,
+            type: 'line'
+        }]
+    };
+
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>
